@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar-brand {
+  font-family: "Sevillana", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.navbar-toggler-icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.image {
+  height: 280px;
+  width: auto;
+  object-fit: cover;
+}
+
+.contact-btn:hover {
+  background-color: white;
+  color: black;
+}
