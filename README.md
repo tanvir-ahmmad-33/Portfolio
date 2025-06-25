@@ -1,5 +1,3 @@
-# Portfolio
-
 ## Overview
 This is my personal portfolio website built using **HTML5**, **CSS3**, **Bootstrap 5**, **JavaScript**, and **jQuery**.
 
