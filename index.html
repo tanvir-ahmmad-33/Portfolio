@@ -21,7 +21,7 @@
   </head>
   <body>
     <!-- navbar section -->
-    <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Tanvir Ahmmad</a>
         <button class="navbar-toggler custom-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -31,11 +31,11 @@
         <div id="navbarNav" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="">Home</a>
+              <a class="nav-link active" href="#hero">Home</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
             <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
           </ul>
         </div>
@@ -43,35 +43,271 @@
     </div>
 
     <!-- hero section -->
-    <div class="hero container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="d-flex justify-content-center justify-content-lg-end pt-3 p-lg-3 m-lg-3">
-            <img src="img/portrait.png" alt="Tanvir Ahmmad portrait" class="img-fluid rounded-circle shadow-lg image" />
+    <div id="hero" class="d-flex align-items-center min-vh-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="d-flex justify-content-center justify-content-lg-end pt-3 p-lg-3 m-lg-3">
+              <img src="img/portrait.png" alt="Tanvir Ahmmad portrait" class="img-fluid rounded-circle shadow-lg image" />
+            </div>
           </div>
-        </div>
-        <div class="col-lg-6 text-center text-lg-start">
-          <p class="text-muted pt-2 mt-2 mt-lg-5 mb-0">Hello, I'm</p>
-          <h1 class="fw-bold mb-0">Tanvir Ahmmad</h1>
-          <p class="text-secondary">Fullstack Web Developer</p>
+          <div class="col-lg-6 text-center text-lg-start">
+            <p class="text-muted pt-2 mt-2 mt-lg-5 mb-0">Hello, I'm</p>
+            <h1 class="fw-bold mb-0">Tanvir Ahmmad</h1>
+            <p class="text-secondary">Fullstack Web Developer</p>
 
-          <div class="mt-4 pt-1">
-            <a href="files/Tanvir-Ahmmad-CV.pdf" download class="btn btn-outline-dark"> <i class="fa-solid fa-download me-1"></i> Download CV </a>
-            <a href="#contact" class="btn btn-dark contact-btn"><i class="fa-solid fa-phone me-1"></i>Contact Info</a>
-          </div>
+            <div class="mt-4 pt-1">
+              <a href="files/Tanvir-Ahmmad-CV.pdf" download class="btn btn-outline-dark"> <i class="fa-solid fa-download me-1"></i> Download CV </a>
+              <a href="#contact" class="btn btn-dark contact-btn"><i class="fa-solid fa-phone me-1"></i>Contact Info</a>
+            </div>
 
-          <div class="social-media mt-2">
-            <a href="#" class="text-dark fs-3 pe-2 rounded" target="_blank"> <i class="fa-brands fa-github"></i></a>
-            <a href="#" class="text-dark fs-3 rounded" target="_blank"> <i class="fa-brands fa-linkedin"></i></a>
+            <div class="social-media mt-2">
+              <a href="#" class="text-dark fs-3 pe-2 rounded" target="_blank"> <i class="fa-brands fa-github"></i></a>
+              <a href="#" class="text-dark fs-3 rounded" target="_blank"> <i class="fa-brands fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <hr />
 
     <!-- about section -->
+    <div id="about" class="min-vh-100">
+      <div class="container">
+        <div class="row">
+          <h6 class="minor-heading text-secondary text-center mb-0 mt-5 pt-5">Get To Know More</h6>
+          <h2 class="heading text-center mb-3 pb-3">About Me</h2>
+        </div>
+        <div class="row mt-2">
+          <div class="col-lg-4">
+            <div class="border border-secondary rounded border-1 p-1 mt-4">
+              <img src="img/image with frame.jpg" alt="Photo in IU-IUPC" class="img-fluid rounded" />
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-6 text-center">
+                <div class="border border-secondary border-2 rounded mt-5">
+                  <i class="fa-solid fa-award fs-3 mt-3"></i>
+                  <h4>Experience</h4>
+                  <p>4+ months Fullstack development</p>
+                </div>
+              </div>
+              <div class="col-lg-6 text-center">
+                <div class="border border-secondary border-2 rounded mt-5">
+                  <i class="fa-solid fa-graduation-cap fs-3 mt-3"></i>
+                  <h4>Education</h4>
+                  <p>B.Sc. in Computer Science & Engineering</p>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+              <div class="col-lg-10">
+                <p class="text-center text-secondary about-description">A dedicated Fullstack Web Developer with over four months of practical experience in building responsive and dynamic web applications. Skilled in frontend technologies including HTML5, CSS3, Bootstrap, JavaScript, and jQuery to create clean, user-focused interfaces. Proficient in backend development using PHP and Laravel, with a strong foundation in database design and management using MySQL. Successfully completed an internship at ThemeTags, where I am gaining real-world experience in fullstack development and collaborative software practices. Pursuing a Bachelor of Science in Computer Science and Engineering, with a strong commitment to continuous learning and delivering efficient, maintainable code for real-world solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- skills section -->
+    <div id="skills" class="min-vh-100">
+      <div class="container">
+        <div class="row">
+          <h6 class="minor-heading text-secondary text-center mb-0 mt-5 pt-5">Explore My</h6>
+          <h1 class="heading text-center mb-3 pb-3">Skills</h1>
+        </div>
+
+        <div class="row">
+          <!-- Frontend -->
+          <div class="col-12 col-lg-6 mb-4">
+            <div class="border border-secondary border-2 rounded skill-box">
+              <h2 class="fs-4 text-secondary text-center pb-3">Frontend development</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-2 d-flex justify-content-end pe-0 pt-0">
+                      <i class="fa-brands fa-html5 fs-1"></i>
+                    </div>
+                    <div class="col-10">
+                      <h4 class="language-name">HTML</h4>
+                      <h6 class="language-experience">Experienced</h6>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-2 d-flex justify-content-end pe-0 pt-0">
+                      <i class="fa-brands fa-bootstrap fs-1"></i>
+                    </div>
+                    <div class="col-10">
+                      <h4 class="language-name">Bootstrap</h4>
+                      <h6 class="language-experience">Intermediate</h6>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-2 d-flex justify-content-end pe-0 pt-0">
+                      <img src="img/jQuery-l.png" alt="jQuery logo" class="juery-logo" />
+                    </div>
+                    <div class="col-10">
+                      <h4 class="language-name">jQuery</h4>
+                      <h6 class="language-experience">Intermediate</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-2 d-flex justify-content-end pe-0 pt-0">
+                      <i class="fa-brands fa-css3-alt fs-1"></i>
+                    </div>
+                    <div class="col-10">
+                      <h4 class="language-name">CSS</h4>
+                      <h6 class="language-experience">Intermediate</h6>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-2 d-flex justify-content-end pe-0 pt-0">
+                      <i class="fa-brands fa-js fs-1"></i>
+                    </div>
+                    <div class="col-10">
+                      <h4 class="language-name">JavaScript</h4>
+                      <h6 class="language-experience">Intermediate</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="col-12 col-lg-6 mb-4">
+            <div class="border border-secondary border-2 rounded skill-box">
+              <h2 class="fs-4 text-secondary text-center pb-3">Backend development</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-2 d-flex justify-content-end pe-0 pt-0">
+                      <i class="fa-brands fa-php fs-1"></i>
+                    </div>
+                    <div class="col-10">
+                      <h4 class="language-name">PHP</h4>
+                      <h6 class="language-experience">Intermediate</h6>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-2 d-flex justify-content-end pe-0 pt-0">
+                      <i class="fa-solid fa-database fs-1"></i>
+                    </div>
+                    <div class="col-10">
+                      <h4 class="language-name">MySQL</h4>
+                      <h6 class="language-experience">Intermediate</h6>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-2 d-flex justify-content-end pe-0 pt-0">
+                      <i class="fa-brands fa-laravel fs-1"></i>
+                    </div>
+                    <div class="col-10">
+                      <h4 class="language-name">Laravel</h4>
+                      <h6 class="language-experience">Intermediate</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <h2 class="text-center bg-dark text-light rounded">Tools</h2>
+          </div>
+          <div class="col-3 text-center">
+            <i class="fa-brands fa-git fs-1"></i>
+          </div>
+          <div class="col-3 text-center">
+            <i class="fa-brands fa-github fs-1"></i>
+          </div>
+          <div class="col-3 text-center">
+            <img src="img/vs-logo.png" alt="VS logo" class="vs-logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- projects section -->
+    <div id="project" class="min-vh-100">
+      <div class="container">
+        <div class="row">
+          <h6 class="minor-heading text-secondary text-center mb-0 mt-5 pt-5">Browse My Recent</h6>
+          <h2 class="heading text-center mb-3 pb-3">Projects</h2>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="card">
+              <img src="img/portfolio-project.png" class="card-img-top" alt="Project image" />
+              <div class="card-body text-center">
+                <h5 class="card-title fs-3">Portfolio</h5>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="text-center border border-dark rounded-pill">
+                      <a href="#" class="text-dark text-decoration-none fs-6">GitHub</a>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-center border border-dark rounded-pill">
+                      <a href="#" class="text-dark text-decoration-none fs-6">Live Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card">
+              <img src="img/blank-project.png" class="card-img-top" alt="Project image" />
+              <div class="card-body text-center">
+                <h5 class="card-title fs-3">...</h5>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="text-center border border-dark rounded-pill">
+                      <a href="#" class="text-dark text-decoration-none fs-6">GitHub</a>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-center border border-dark rounded-pill">
+                      <a href="#" class="text-dark text-decoration-none fs-6">Live Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card">
+              <img src="img/blank-project.png" class="card-img-top" alt="Project image" />
+              <div class="card-body text-center">
+                <h5 class="card-title fs-3">...</h5>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="text-center border border-dark rounded-pill">
+                      <a href="#" class="text-dark text-decoration-none fs-6">GitHub</a>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-center border border-dark rounded-pill">
+                      <a href="#" class="text-dark text-decoration-none fs-6">Live Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- contact section -->
 
     <!-- bootstrap js -->

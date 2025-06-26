@@ -7,6 +7,14 @@ html {
   scroll-behavior: smooth;
 }
 
+.minor-heading {
+  font-size: 14px;
+}
+
+.heading {
+  font-size: 50px;
+}
+
 .navbar-brand {
   font-family: "Sevillana", cursive;
   font-weight: 500;
@@ -28,4 +36,58 @@ html {
 .contact-btn:hover {
   background-color: white;
   color: black;
+}
+
+.about-description {
+  font-size: 14px;
+}
+
+/****************************************/
+/************ skills section ************/
+/****************************************/
+.skill-box {
+  height: 290px;
+  padding: 24px;
+}
+
+.language-name {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.language-experience {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.juery-logo {
+  height: 42px;
+}
+
+.toolbox {
+  height: 65px;
+  padding: 1px;
+}
+
+.vs-logo {
+  height: 40px;
+}
+
+@media (max-width: 576px) {
+  .language-name {
+    font-size: 16px;
+  }
+
+  .language-experience {
+    font-size: 10px;
+  }
+
+  .skill-box {
+    padding: 16px;
+  }
+
+  .toolbox {
+    height: 100px;
+  }
 }
