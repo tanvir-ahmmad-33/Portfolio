@@ -91,3 +91,16 @@ html {
     height: 100px;
   }
 }
+
+/*****************************************/
+/************ project section ************/
+/*****************************************/
+
+.project-image {
+  height: 380px;
+  width: auto;
+}
+
+.custom-contact-gap {
+  margin-top: 500px;
+}
