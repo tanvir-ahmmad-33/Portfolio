@@ -9,4 +9,21 @@ $(document).ready(function () {
       confirmButtonText: "Close",
     });
   });
+
+  $(".navbar-nav .nav-link").click(function () {
+    $(".navbar-nav .nav-link").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  $(window).on("scroll", function () {
+    var scrollPos = $(document).scrollTop() + 100;
+    $(".navbar-nav .nav-link").each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $(".navbar-nav .nav-link").removeClass("active");
+        currLink.addClass("active");
+      }
+    });
+  });
 });
