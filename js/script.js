@@ -26,4 +26,28 @@ $(document).ready(function () {
       }
     });
   });
+
+  let animated = false;
+  $(window).on("scroll", function () {
+    var journeyTop = $("#journey").offset().top - window.innerHeight + 100;
+    if (!animated && $(window).scrollTop() > journeyTop) {
+      $(".counter").each(function () {
+        $(this)
+          .prop("Counter", 0)
+          .animate(
+            {
+              Counter: $(this).data("count"),
+            },
+            {
+              duration: 5000,
+              easing: "swing",
+              step: function (now) {
+                $(this).text(Math.ceil(now));
+              },
+            }
+          );
+      });
+      animated = true;
+    }
+  });
 });
