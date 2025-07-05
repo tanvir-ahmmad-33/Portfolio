@@ -50,4 +50,33 @@ $(document).ready(function () {
       animated = true;
     }
   });
+
+  $(".oj-logo").on("click", function () {
+    const judgeName = $(this).data("name");
+    const judgeData = $(this).data("stack");
+    const judgeLink = $(this).data("link");
+
+    const linkButtonText = "Go to " + judgeName;
+
+    Swal.fire({
+      title: judgeName,
+      html: judgeData,
+
+      confirmButtonText: linkButtonText,
+      showDenyButton: true,
+      denyButtonText: "Close",
+      denyButtonColor: "gray",
+
+      timer: 800000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        $(toast).on("mouseenter", Swal.stopTimer);
+        $(toast).on("mouseleave", Swal.resumeTimer);
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.open(judgeLink, "_blank");
+      }
+    });
+  });
 });

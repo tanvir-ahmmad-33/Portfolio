@@ -74,6 +74,11 @@ html {
   height: 40px;
 }
 
+.other-language-logo {
+  height: 50px;
+  padding: 5px;
+}
+
 @media (max-width: 576px) {
   .language-name {
     font-size: 16px;
@@ -127,6 +132,11 @@ html {
   height: 45px;
 }
 
-.wow {
-  width: 110px;
+/*************************************/
+/************ sweet alert ************/
+/*************************************/
+
+.custom-button {
+  border: 3px dark black;
+  border-radius: 5px;
 }
