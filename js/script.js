@@ -67,7 +67,7 @@ $(document).ready(function () {
       denyButtonText: "Close",
       denyButtonColor: "gray",
 
-      timer: 800000,
+      timer: 7000,
       timerProgressBar: true,
       didOpen: (toast) => {
         $(toast).on("mouseenter", Swal.stopTimer);
@@ -77,6 +77,26 @@ $(document).ready(function () {
       if (result.isConfirmed) {
         window.open(judgeLink, "_blank");
       }
+    });
+  });
+
+  $("#others-oj-button").on("click", function () {
+    const judgeName = $(this).data("name");
+    const judgeData = $(this).data("details");
+
+    Swal.fire({
+      title: judgeName,
+      html: judgeData,
+
+      confirmButtonText: "Close",
+      confirmButtonColor: "gray",
+
+      timer: 7000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        $(toast).on("mouseenter", Swal.stopTimer);
+        $(toast).on("mouseleave", Swal.resumeTimer);
+      },
     });
   });
 });
