@@ -15,6 +15,10 @@ html {
   font-size: 50px;
 }
 
+#title-role {
+  transition: all 0.5s ease-in-out;
+}
+
 .navbar-brand {
   font-family: "Sevillana", cursive;
   font-weight: 500;
@@ -107,23 +111,41 @@ html {
   .logo {
     padding-left: 5px;
   }
-
-  .project-image {
-    max-height: 200px;
-  }
 }
 
 /*****************************************/
 /************ project section ************/
 /*****************************************/
 
-.project-image {
+.project-image-1 {
   height: 380px;
   width: auto;
+}
+.project-image-2 {
+  height: 190px;
+  width: auto;
+  margin-top: 85px !important;
+}
+
+.image-part {
+  height: 388px;
 }
 
 .custom-contact-gap {
   margin-top: 500px;
+}
+
+@media (max-width: 576px) {
+  .project-image-1 {
+    max-height: 200px;
+  }
+  .project-image-2 {
+    max-height: 170px;
+  }
+
+  .image-part {
+    height: 190px;
+  }
 }
 
 /*****************************************************/

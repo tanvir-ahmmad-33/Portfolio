@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  setTimeout(function () {
+    $("#title-role").text("Competitive Programmer");
+  }, 2000);
+
   $(".project-stack").on("click", function () {
     const stackInfo = $(this).data("stack");
     const projectName = $(this).data("name");
