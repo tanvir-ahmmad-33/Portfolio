@@ -1,40 +1,14 @@
 $(document).ready(function () {
   setTimeout(function () {
-    // *************************************************
-    // ********* ** Title change on interval ***** *****
-    // *************************************************
     $("#title-role").text("Competitive Programmer");
   }, 2000);
 
   // *************************************************
   // *************** Moving Section JS ***************
   // *************************************************
-  $(".scroll-to-top").on("click", function () {
-    $("html, body").scrollTop($("#hero").offset().top);
-  });
-
-  $(".scroll-to-hero").on("click", function () {
-    $("html, body").scrollTop($("#hero").offset().top);
-  });
-
-  $(".scroll-to-about").on("click", function () {
-    $("html, body").scrollTop($("#about").offset().top);
-  });
-
-  $(".scroll-to-skills").on("click", function () {
-    $("html, body").scrollTop($("#skills").offset().top);
-  });
-
-  $(".scroll-to-project").on("click", function () {
-    $("body, html").scrollTop($("#project").offset().top);
-  });
-
-  $(".scroll-to-journey").on("click", function () {
-    $("body, html").scrollTop($("#journey").offset().top);
-  });
-
-  $(".scroll-to-contact").on("click", function () {
-    $("body, html").scrollTop($("#contact").offset().top);
+  $(".scroll-to").on("click", function () {
+    let target = $(this).data("target");
+    $("html, body").animate({ scrollTop: $(target).offset().top }, 0);
   });
 
   // *************************************************
@@ -64,41 +38,64 @@ $(document).ready(function () {
   // *************************************************
   $(window).on("scroll", function () {
     var scrollPos = $(document).scrollTop() + 100;
+
     $(".navbar-nav .nav-link").each(function () {
       var currLink = $(this);
-      var refElement = $(currLink.attr("href"));
-      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-        $(".navbar-nav .nav-link").removeClass("active");
-        currLink.addClass("active");
+      var target = currLink.data("target");
+
+      var refElement = $(target);
+
+      if (refElement.length) {
+        var refTop = refElement.offset().top;
+        var refBottom = refTop + refElement.outerHeight();
+
+        if (refTop <= scrollPos && refBottom > scrollPos) {
+          $(".navbar-nav .nav-link").removeClass("active");
+          currLink.addClass("active");
+        }
       }
     });
   });
 
   // *************************************************
-  // ************ Animate Counters on Scroll *********
+  // ******** Journey box update on scrolling ********
   // *************************************************
-  let animated = false;
-  $(window).on("scroll", function () {
-    var journeyTop = $("#journey").offset().top - window.innerHeight + 100;
-    if (!animated && $(window).scrollTop() > journeyTop) {
+  $(document).ready(function () {
+    function animateCounters() {
       $(".counter").each(function () {
-        $(this)
-          .prop("Counter", 0)
-          .animate(
-            {
-              Counter: $(this).data("count"),
-            },
+        var $this = $(this);
+        if (!$this.hasClass("animated")) {
+          var countTo = $this.data("count");
+
+          $({ countNum: $this.text() }).animate(
+            { countNum: countTo },
             {
               duration: 5000,
               easing: "swing",
-              step: function (now) {
-                $(this).text(Math.ceil(now));
+              step: function () {
+                $this.text(Math.ceil(this.countNum));
+              },
+              complete: function () {
+                $this.text(countTo);
+                $this.addClass("animated");
               },
             }
           );
+        }
       });
-      animated = true;
     }
+
+    $(window).on("scroll", function () {
+      var scrollPos = $(document).scrollTop() + $(window).height();
+      var journeyTop = $("#journey").offset().top;
+      var journeyBottom = journeyTop + $("#journey").outerHeight();
+
+      if (journeyTop <= scrollPos && journeyBottom > scrollPos) {
+        animateCounters();
+      }
+    });
+
+    $(window).trigger("scroll");
   });
 
   // *************************************************
