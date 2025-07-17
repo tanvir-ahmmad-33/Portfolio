@@ -1,3 +1,6 @@
+/******************************************/
+/************* common section *************/
+/******************************************/
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +18,16 @@ html {
   font-size: 50px;
 }
 
-#title-role {
-  transition: all 0.5s ease-in-out;
+.cursor {
+  cursor: pointer;
 }
+
+/******************************************/
+/************* navbar section *************/
+/******************************************/
+/* .navbar .nav-item {
+  cursor: pointer;
+} */
 
 .navbar-brand {
   font-family: "Sevillana", cursive;
@@ -31,10 +41,17 @@ html {
   height: 1.2em;
 }
 
-.image {
+.hero-image {
   height: 280px;
   width: auto;
   object-fit: cover;
+}
+
+/******************************************/
+/************** hero section **************/
+/******************************************/
+#title-role {
+  transition: all 0.5s ease-in-out;
 }
 
 .contact-btn:hover {
@@ -42,13 +59,16 @@ html {
   color: black;
 }
 
+/******************************************/
+/************** about section *************/
+/******************************************/
 .about-description {
   font-size: 14px;
 }
 
-/****************************************/
-/************ skills section ************/
-/****************************************/
+/******************************************/
+/************* skills section *************/
+/******************************************/
 .skill-box {
   height: 290px;
   padding: 24px;
@@ -65,13 +85,8 @@ html {
   font-weight: 600;
 }
 
-.juery-logo {
+.jquery-logo {
   height: 42px;
-}
-
-.toolbox {
-  height: 65px;
-  padding: 1px;
 }
 
 .vs-logo {
@@ -79,44 +94,17 @@ html {
 }
 
 .other-language-logo {
-  height: 40px;
-  padding: 5px;
+  height: 50px;
+  padding: 10px;
 }
 
-#others-oj-button {
-  font-size: 13px;
+.tools-box {
+  margin-top: 15px;
 }
 
-@media (max-width: 576px) {
-  .language-name {
-    font-size: 16px;
-  }
-
-  .language-experience {
-    font-size: 10px;
-  }
-
-  .skill-box {
-    padding: 16px;
-  }
-
-  .toolbox {
-    height: 100px;
-  }
-
-  .juery-logo {
-    height: 30px;
-  }
-
-  .logo {
-    padding-left: 5px;
-  }
-}
-
-/*****************************************/
-/************ project section ************/
-/*****************************************/
-
+/******************************************/
+/************* project section ************/
+/******************************************/
 .project-image-1 {
   height: 380px;
   width: auto;
@@ -131,38 +119,68 @@ html {
   height: 388px;
 }
 
-.custom-contact-gap {
-  margin-top: 500px;
+/******************************************/
+/******* programming journey section ******/
+/******************************************/
+.oj-logo {
+  height: 45px;
+}
+#others-oj-button {
+  font-size: 13px;
 }
 
+/************ responsive section **********/
 @media (max-width: 576px) {
+  /******************************************/
+  /************* skills section *************/
+  /******************************************/
+  .skill-box {
+    padding: 16px;
+  }
+
+  .language-name {
+    font-size: 16px;
+  }
+
+  .language-experience {
+    font-size: 10px;
+  }
+
+  .jquery-logo {
+    height: 30px;
+  }
+
+  .logo {
+    padding-left: 5px;
+  }
+
+  .vs-logo {
+    height: 31px;
+  }
+
+  .other-language-title {
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid black;
+  }
+
+  .tools-box-title {
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+  }
+
+  /******************************************/
+  /************* project section ************/
+  /******************************************/
   .project-image-1 {
     max-height: 200px;
   }
   .project-image-2 {
     max-height: 170px;
+    margin-top: 8px !important;
   }
 
   .image-part {
     height: 190px;
   }
-}
-
-/*****************************************************/
-/************ programming journey section ************/
-/*****************************************************/
-.programming-gallery-1 {
-  height: 220px;
-}
-.oj-logo {
-  height: 45px;
-}
-
-/*************************************/
-/************ sweet alert ************/
-/*************************************/
-
-.custom-button {
-  border: 3px dark black;
-  border-radius: 5px;
 }

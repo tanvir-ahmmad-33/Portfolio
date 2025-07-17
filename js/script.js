@@ -1,8 +1,45 @@
 $(document).ready(function () {
   setTimeout(function () {
+    // *************************************************
+    // ********* ** Title change on interval ***** *****
+    // *************************************************
     $("#title-role").text("Competitive Programmer");
   }, 2000);
 
+  // *************************************************
+  // *************** Moving Section JS ***************
+  // *************************************************
+  $(".scroll-to-top").on("click", function () {
+    $("html, body").scrollTop($("#hero").offset().top);
+  });
+
+  $(".scroll-to-hero").on("click", function () {
+    $("html, body").scrollTop($("#hero").offset().top);
+  });
+
+  $(".scroll-to-about").on("click", function () {
+    $("html, body").scrollTop($("#about").offset().top);
+  });
+
+  $(".scroll-to-skills").on("click", function () {
+    $("html, body").scrollTop($("#skills").offset().top);
+  });
+
+  $(".scroll-to-project").on("click", function () {
+    $("body, html").scrollTop($("#project").offset().top);
+  });
+
+  $(".scroll-to-journey").on("click", function () {
+    $("body, html").scrollTop($("#journey").offset().top);
+  });
+
+  $(".scroll-to-contact").on("click", function () {
+    $("body, html").scrollTop($("#contact").offset().top);
+  });
+
+  // *************************************************
+  // ********* Stack button click on projects ********
+  // *************************************************
   $(".project-stack").on("click", function () {
     const stackInfo = $(this).data("stack");
     const projectName = $(this).data("name");
@@ -14,11 +51,17 @@ $(document).ready(function () {
     });
   });
 
+  // *************************************************
+  // *********** Active Navbar Link on Click *********
+  // *************************************************
   $(".navbar-nav .nav-link").click(function () {
     $(".navbar-nav .nav-link").removeClass("active");
     $(this).addClass("active");
   });
 
+  // *************************************************
+  // ************** Highlight Navbar Link ************
+  // *************************************************
   $(window).on("scroll", function () {
     var scrollPos = $(document).scrollTop() + 100;
     $(".navbar-nav .nav-link").each(function () {
@@ -31,6 +74,9 @@ $(document).ready(function () {
     });
   });
 
+  // *************************************************
+  // ************ Animate Counters on Scroll *********
+  // *************************************************
   let animated = false;
   $(window).on("scroll", function () {
     var journeyTop = $("#journey").offset().top - window.innerHeight + 100;
@@ -55,6 +101,9 @@ $(document).ready(function () {
     }
   });
 
+  // *************************************************
+  // *** OJ info add button using sweetAlert prompt **
+  // *************************************************
   $(".oj-logo").on("click", function () {
     const judgeName = $(this).data("name");
     const judgeData = $(this).data("stack");
