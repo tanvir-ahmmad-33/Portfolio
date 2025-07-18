@@ -22,4 +22,4 @@ This is my personal portfolio website built using **HTML5**, **CSS3**, **Bootstr
 ## ⚙️ Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/your-portfolio.git
+   git clone https://github.com/tanvir-ahmmad-33/Portfolio
