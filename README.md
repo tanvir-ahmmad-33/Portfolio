@@ -19,7 +19,7 @@ This is my personal portfolio website built using **HTML5**, **CSS3**, **Bootstr
 - jQuery
 - Font Awesome Icons
 
-## Installation
+## ⚙️ Installation
 1. Clone this repository:
    ```bash
    git clone https://github.com/your-username/your-portfolio.git
