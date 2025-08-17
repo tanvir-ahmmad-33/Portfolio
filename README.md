@@ -4,7 +4,7 @@ This is my personal portfolio website built using **HTML5**, **CSS3**, **Bootstr
 ## 🚀 Live Demo
 [View Live Portfolio](https://tanvir-ahmmad-33.github.io/Portfolio/)
 
-## Features
+## ✨ Features
 - Responsive design that works on all devices
 - Project showcase with descriptions
 - Skills section highlighting my expertise
@@ -19,7 +19,7 @@ This is my personal portfolio website built using **HTML5**, **CSS3**, **Bootstr
 - jQuery
 - Font Awesome Icons
 
-## Installation
+## ⚙️ Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/your-portfolio.git
+   git clone https://github.com/tanvir-ahmmad-33/Portfolio
